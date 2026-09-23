@@ -1,0 +1,11 @@
+.health-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.muted {
+  color: var(--p-text-muted-color);
+  font-size: 0.875rem;
+}

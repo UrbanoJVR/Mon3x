@@ -1,0 +1,12 @@
+<p-toolbar styleClass="monex-toolbar">
+  <ng-template #start>
+    <span class="monex-brand">{{ title }}</span>
+  </ng-template>
+  <ng-template #end>
+    <p-button label="Inicio" routerLink="/" [text]="true" />
+  </ng-template>
+</p-toolbar>
+
+<main class="monex-main">
+  <router-outlet />
+</main>

@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.monex-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--p-primary-color);
+}
+
+.monex-main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+<p-card header="Bienvenido a Monex">
+  <p>
+    Aplicación de escritorio para la gestión de finanzas personales y familiares.
+  </p>
+
+  @if (loading()) {
+    <p>Comprobando el estado del backend…</p>
+  } @else if (error(); as err) {
+    <p-message severity="warn">{{ err }}</p-message>
+  } @else if (health(); as h) {
+    <div class="health-row">
+      <span>API</span>
+      <p-tag [value]="h.status" [severity]="h.status === 'UP' ? 'success' : 'danger'" />
+      <span class="muted">{{ h.application }}</span>
+    </div>
+  }
+</p-card>
