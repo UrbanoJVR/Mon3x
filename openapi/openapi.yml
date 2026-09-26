@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Monex API
+  version: 0.0.1
+  description: API de Monex para la gestión de finanzas personales y familiares.
+servers:
+  - url: http://localhost:8080
+    description: Local
+tags:
+  - name: Categories
+    description: Categorías de ingresos, gastos y activos
+paths:
+  /categories:
+    post:
+      tags:
+        - Categories
+      operationId: createCategory
+      summary: Create a category
+      description: Creates a new category.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCategoryRequest'
+      responses:
+        '201':
+          description: Category created
+        '400':
+          description: Invalid request
+components:
+  schemas:
+    CategoryType:
+      type: string
+      description: Category classification
+      enum:
+        - INCOME
+        - EXPENSE
+        - ASSET
+    CreateCategoryRequest:
+      type: object
+      required:
+        - name
+        - type
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 30
+          description: Category name
+        description:
+          type: string
+          maxLength: 200
+          description: Optional category description
+        type:
+          $ref: '#/components/schemas/CategoryType'

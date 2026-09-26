@@ -32,6 +32,7 @@
         <frontend-maven-plugin.version>1.15.1</frontend-maven-plugin.version>
         <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
         <jpackage-maven-plugin.version>1.6.6</jpackage-maven-plugin.version>
+        <openapi-generator.version>7.21.0</openapi-generator.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -82,6 +83,11 @@
                     <groupId>org.panteleyev</groupId>
                     <artifactId>jpackage-maven-plugin</artifactId>
                     <version>${jpackage-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.openapitools</groupId>
+                    <artifactId>openapi-generator-maven-plugin</artifactId>
+                    <version>${openapi-generator.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
