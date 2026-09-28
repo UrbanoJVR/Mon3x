@@ -2,6 +2,6 @@ databaseChangeLog:
   - changeSet:
       id: 000-baseline
       author: monex
-      comment: Baseline vacío; tablas de dominio se añadirán en el roadmap
+      comment: Empty baseline change set to mark the initial state of the database
       changes:
         - empty: {}
